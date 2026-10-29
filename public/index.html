@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rantcle - Vehicle Rentals</title>
+
+  <!-- Google Fonts: Poppins (headings), Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Header / Navigation -->
+  <header class="header">
+    <div class="container navbar">
+      <a href="index.html" class="logo">Rant<span>cle</span></a>
+
+      <button class="hamburger" id="hamburgerBtn" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="find.html">Find Vehicles</a></li>
+        <li><a href="myvehicle.html">List Your Vehicle</a></li>
+        <li><a href="admin.html">Admin</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="container hero-content">
+        <div class="hero-pill">
+          <span>⚡ Fast, Flexible &amp; Affordable</span>
+        </div>
+        <h1>Rent Vehicles with Ease</h1>
+        <p class="hero-subtitle">Find bikes, scooters, cars and more at affordable prices in your city</p>
+        <div class="hero-actions">
+          <a href="find.html" class="btn btn-primary btn-lg">Browse Vehicles</a>
+          <a href="myvehicle.html" class="btn btn-outline-white btn-lg">List Your Vehicle</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Vehicles Section -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Featured Vehicles</h2>
+          <p class="section-subtitle">Top picks available for rent near you right now</p>
+        </div>
+
+        <!-- Loading State -->
+        <div id="loadingState" class="loading" aria-live="polite">
+          <div class="spinner"></div>
+          <p>Loading featured vehicles...</p>
+        </div>
+
+        <!-- Error State -->
+        <div id="errorState" class="empty-state d-none">
+          <div class="empty-state-icon">⚠️</div>
+          <h3>Unable to load vehicles</h3>
+          <p id="errorMessage">Something went wrong while fetching the latest vehicles.</p>
+          <button id="retryBtn" class="btn btn-outline-primary" type="button">Try Again</button>
+        </div>
+
+        <!-- Empty State -->
+        <div id="emptyState" class="empty-state d-none">
+          <div class="empty-state-icon">🚗</div>
+          <h3>No vehicles available</h3>
+          <p>We don't have any vehicles listed right now. Check back shortly or list your own!</p>
+          <a href="myvehicle.html" class="btn btn-primary">List Your Vehicle</a>
+        </div>
+
+        <!-- Vehicle Grid -->
+        <div id="featuredGrid" class="vehicle-grid d-none"></div>
+
+        <!-- View All Button -->
+        <div id="viewAllContainer" class="text-center mt-4 d-none">
+          <a href="find.html" class="btn btn-outline-primary btn-lg">View All Vehicles →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="section how-it-works">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">How It Works</h2>
+          <p class="section-subtitle">Rent your ride in three quick and simple steps</p>
+        </div>
+
+        <div class="steps-grid">
+          <!-- Step 1 -->
+          <div class="step-card">
+            <span class="step-number">01</span>
+            <div class="step-icon">🔍</div>
+            <h3 class="step-title">Browse</h3>
+            <p class="step-desc">Search through verified bikes, scooters, cars, and cycles with clear hourly and daily rates.</p>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="step-card">
+            <span class="step-number">02</span>
+            <div class="step-icon">📅</div>
+            <h3 class="step-title">Book</h3>
+            <p class="step-desc">Select pickup and drop times, fill in your details, and instantly submit your rental request.</p>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="step-card">
+            <span class="step-number">03</span>
+            <div class="step-icon">🚀</div>
+            <h3 class="step-title">Ride</h3>
+            <p class="step-desc">Pick up the keys at the location, hit the open road, and enjoy a smooth, reliable journey.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <a href="index.html" class="footer-logo">Rant<span>cle</span></a>
+      <p class="footer-description">Affordable, reliable, and convenient vehicle rentals across your city. Rent bikes, scooters, cars, and cycles with complete confidence.</p>
+      <ul class="footer-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="find.html">Find Vehicles</a></li>
+        <li><a href="myvehicle.html">List Your Vehicle</a></li>
+        <li><a href="admin.html">Admin</a></li>
+      </ul>
+      <div class="footer-bottom">
+        <p>© 2026 Rantcle. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- API Client Script -->
+  <script src="js/api.js"></script>
+
+  <!-- Page Logic Script -->
+  <script src="js/index.js"></script>
+</body>
+</html>

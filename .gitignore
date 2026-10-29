@@ -1,0 +1,7 @@
+node_modules/
+.env
+uploads/*
+!uploads/.gitkeep
+# Private configuration (database password, admin hash, JWT secret)
+config/rantcle.config.json
+config/*.tmp
