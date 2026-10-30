@@ -15,19 +15,6 @@
   --radius: 16px;
   --tabbar-h: 64px;
 }
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg: #0b1220;
-    --surface: #131c2e;
-    --text: #e8edf6;
-    --muted: #93a1b8;
-    --line: #22304a;
-    --ok: #34d399;
-    --ok-bg: #0f3a2c;
-    --bad: #fca5a5;
-    --bad-bg: #4a1d1d;
-  }
-}
 
 * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
 html { -webkit-text-size-adjust: 100%; }
@@ -58,7 +45,7 @@ a { color: inherit; text-decoration: none; }
   padding: calc(10px + env(safe-area-inset-top)) 16px 10px;
   background: var(--bg);
 }
-.topbar__title { margin: 0; font-size: 22px; font-weight: 700; letter-spacing: -0.2px; }
+.topbar__title { margin: 0; font-size: 22px; font-weight: 800; letter-spacing: -0.3px; }
 .icon-btn {
   width: 44px; height: 44px; border: 0; border-radius: 50%;
   display: grid; place-items: center;
@@ -71,29 +58,25 @@ a { color: inherit; text-decoration: none; }
 
 .content { padding: 4px 16px 24px; }
 
-/* Two main actions */
-.actions { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+/* Two main actions (compact) */
+.actions { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
 .action {
-  display: flex; flex-direction: column; gap: 4px;
-  min-height: 132px; padding: 16px;
-  border-radius: var(--radius);
-  box-shadow: 0 6px 16px rgba(15, 23, 42, .12);
+  display: flex; align-items: center; justify-content: center; gap: 8px;
+  height: 48px; padding: 0 12px;
+  border-radius: 14px;
+  font-size: 15px; font-weight: 700;
+  box-shadow: 0 2px 6px rgba(15, 23, 42, .12);
   transition: transform .12s ease;
 }
 .action:active { transform: scale(.97); }
 .action--find { background: var(--primary); color: var(--primary-ink); }
 .action--list { background: var(--accent); color: #1f1300; }
-.action__icon {
-  width: 44px; height: 44px; border-radius: 12px;
-  display: grid; place-items: center; margin-bottom: auto;
-  background: rgba(255, 255, 255, .22);
-}
-.action--list .action__icon { background: rgba(255, 255, 255, .45); }
-.action__label { font-size: 18px; font-weight: 700; }
-.action__hint { font-size: 13px; opacity: .85; line-height: 1.25; white-space: nowrap; }
+.action__icon { display: grid; place-items: center; }
+.action__icon svg { width: 20px; height: 20px; }
+.action__label { white-space: nowrap; }
 
 /* Search + chips */
-.filters { margin-top: 18px; }
+.filters { margin-top: 14px; }
 .search {
   display: flex; align-items: center; gap: 10px;
   height: 48px; padding: 0 14px;

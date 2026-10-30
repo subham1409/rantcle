@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Find Vehicles | Rantcle - Peer-to-Peer Vehicle Rentals</title>
   <meta name="description" content="Search, filter, and book rental bikes, scooters, cars, and cycles with flexible hourly and daily rates on Rantcle.">
 
@@ -391,46 +391,14 @@
       }
     }
   </style>
+  <link rel="stylesheet" href="css/shell.css">
 </head>
-<body>
-
-  <!-- ======================================================================
-       HEADER / NAVIGATION (Same header as index.html, Find Vehicles is active)
-       ====================================================================== -->
-  <header class="header">
-    <div class="container navbar">
-      <a href="index.html" class="logo">Rant<span>cle</span></a>
-
-      <button class="hamburger" id="hamburgerBtn" aria-label="Toggle navigation menu" aria-expanded="false">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-
-      <ul class="nav-links" id="navLinks">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="find.html" class="active">Find Vehicles</a></li>
-        <li><a href="myvehicle.html">List Your Vehicle</a></li>
-        <li><a href="admin.html">Admin</a></li>
-      </ul>
-    </div>
+<body class="app-page">
+  <header class="topbar">
+    <a href="index.html" class="topbar__title">Rantcle</a>
   </header>
 
   <main>
-    <!-- ====================================================================
-         HERO SECTION
-         ==================================================================== -->
-    <section class="find-hero">
-      <div class="container">
-        <div class="find-hero-badge">
-          <span>🔍</span> Verified Rental Fleet
-        </div>
-        <h1>Find Your Perfect <span>Ride</span></h1>
-        <p class="find-hero-subtitle">
-          Search and book bikes, scooters, cars, and cycles with transparent hourly and daily pricing across your city.
-        </p>
-      </div>
-    </section>
 
     <!-- ====================================================================
          SEARCH & FILTER SECTION
@@ -728,25 +696,11 @@
 
     </div>
   </div>
-
-  <!-- ======================================================================
-       FOOTER (Same footer as index.html)
-       ====================================================================== -->
-  <footer class="footer">
-    <div class="container footer-content">
-      <a href="index.html" class="footer-logo">Rant<span>cle</span></a>
-      <p class="footer-description">Affordable, reliable, and convenient vehicle rentals across your city. Rent bikes, scooters, cars, and cycles with complete confidence.</p>
-      <ul class="footer-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="find.html">Find Vehicles</a></li>
-        <li><a href="myvehicle.html">List Your Vehicle</a></li>
-        <li><a href="admin.html">Admin</a></li>
-      </ul>
-      <div class="footer-bottom">
-        <p>© 2026 Rantcle. All rights reserved.</p>
-      </div>
-    </div>
-  </footer>
+  <nav class="tabbar" aria-label="Main">
+    <a href="index.html" class="tab"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 11 9-8 9 8"/><path d="M5 10v10h14V10"/></svg><span>Home</span></a>
+    <a href="find.html" class="tab is-active" aria-current="page"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg><span>Find</span></a>
+    <a href="myvehicle.html" class="tab"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v8M8 12h8"/></svg><span>List</span></a>
+  </nav>
 
   <!-- API Client Script -->
   <script src="js/api.js"></script>
